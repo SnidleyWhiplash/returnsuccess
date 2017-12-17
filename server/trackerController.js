@@ -9,5 +9,6 @@ router
     .get("/entry/exercises", (req, res) => res.send(tracker.entry.exercises))
     .post("/entry/exercises", (req, res) => {
         tracker.entry.exercises.push(req.body);
+        res.status(201).send(tracker.entry.exercises);
     })
 module.exports.router = router;
