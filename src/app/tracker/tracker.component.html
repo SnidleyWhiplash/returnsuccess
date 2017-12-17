@@ -1,0 +1,130 @@
+<div class="container-fluid" id="main-content">
+  <div class="container card" id="homeMain">
+      <div class="card-body">
+          <h2 class="card-title main-title">Add an Exercise to Your Tracker</h2>
+          <!-- <form id="trackerAddExerciseForm">
+              <div class="row">
+                  <div class="form-group col-md-3" id="trackerExerciseSelectDiv">
+                      <label class="form-control-label" for="trackerExerciseSelect">
+                          Select an exercise from the list:
+                      </label>
+                      <select [(ngModel)]="selectedExercise" class="form-control" id="trackerExerciseSelect">
+                          <option selected disabled>Choose an Exercise</option>
+                          <option *ngFor="#exercise of exercises" [ngValue]="name">{{exercise.name}}</option>
+                      </select>
+                  </div>
+                  <div class="form-group col-md-2" id="trackerExerciseDetailsDiv">
+                      <div class="form-row">
+                          <div class="col-md-6">
+                              <label class="form-control-label" for="trackerRepCount">
+                                  Reps:
+                              </label>
+                              <input type="text" class="form-control" id="trackerRepCount" name="repCount" autocomplete="off">
+                          </div>
+                          <div class="col-md-6">
+                              <label class="form-control-label" for="trackerSetCount">
+                                  Sets:
+                              </label>
+                              <input type="text" class="form-control" id="trackerSetCount" name="setCount" autocomplete="off">                        
+                          </div>
+                      </div>
+                      <div class="form-row">
+                          <div class="col-md-12">
+                              <label class="form-control-label" for="trackerWeight" id="trackerWeightLabel">
+                                  Weight:
+                              </label>
+                              <div class="form-row">
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control form-inline" id="trackerWeight" name="weight" autocomplete="off">
+                                  </div>
+                                  <div class="col-md-6">
+                                      <select class="form-control form-inline" id="trackerWeightSelect">
+                                          <option>lbs.</option>
+                                          <option>kgs.</option>
+                                      </select>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-row">
+                          <div class="col-md-12">
+                              <label class="form-control-label" for="trackerTime" id="trackerTimeLabel">
+                                  Time:
+                              </label>
+                              <div class="form-row">
+                                  <div class="col-md-6">
+                                      <input type="text" class="form-control" id="trackerTime" name="time" autocomplete="off">
+                                  </div>
+                                  <div class="col-md-6">
+                                      <select class="form-control form-inline" id="trackerTimeSelect">
+                                          <option selected>s</option>
+                                          <option>m</option>
+                                      </select>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-1" id="arrowContainer">
+                      <button type="button" class="btn btn-warning btn-lg">
+                          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                      </button>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="form-group" id="addedExercises">
+                          <label class="form-control-label" for="trackerAddedExercisePane">
+                              Added exercises:
+                          </label>
+                          <table class="table table-bordered table-hover" id="myExercisesTable">
+                              <thead class="thead-light">
+                                  <tr>
+                                      <th>#</th>
+                                      <th>Name</th>
+                                      <th>Reps</th>
+                                      <th>Set</th>
+                                      <th>Weight</th>
+                                      <th>Time</th>
+                                      <th><input type='checkbox' name='removeAll' id="removeAllCheck"></th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                <tr *ngFor="let x of myself.myExercises; index as i">{{x.name}}</tr>
+                              </tbody>
+                          </table>
+                          <input type="button" class="btn btn-danger" value="Delete" id="trackerDeleteChecked">
+                          <input type="submit" class="btn btn-info" value="Submit" id="trackerSaveAdded">
+                      </div>
+                  </div>
+              </div>
+          </form> -->
+          <div class="row">
+              <div class="col-md-4">
+                  <div class="card">
+                      <div class="card-header">
+                          Exercises
+                      </div>
+                      <ul class="list-group list-group-flush" id="">
+                          <!-- <li *ngFor="let x of exercises; index as i" class="list-group-item" 
+                            (click)="addToEntry($event, x, i)">
+                            {{x.name}}
+                          </li> -->
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-md-3"></div>
+              <div class="col-md-5">
+                  <div class="card">
+                      <div class="card-header">
+                          My Exercise Log
+                      </div>
+                      <ul class="list-group">
+                          <!-- <li *ngFor="let x of myself.myExercises; index as i" class="list-group-item">
+                            {{x.name}}
+                          </li> -->
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

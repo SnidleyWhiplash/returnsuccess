@@ -88,3 +88,12 @@ $("#exercise-list").click("li", function(e) {
     const data = { name: $li.text() };
     $.post("/tracker/entry/exercises", data);
 })
+
+$("#my-exercise-log").click("li", function(e) {
+    console.log("clicked to delete");
+    e.preventDefault();
+    const $li = $(e.originalEvent.srcElement);
+    const data = { name: $li.text() };
+    //$.get("/tracker/entry/exercises", data);
+    $li.remove();
+})

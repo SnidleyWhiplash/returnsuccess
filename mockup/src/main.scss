@@ -1,140 +1,4 @@
-@import "~bootstrap/scss/bootstrap";
 
-* {
-    box-sizing: border-box;
-  }
-  
-  header {
-    width: 100%;
-    height: 220px;
-    background: url("../imgs/header-background.jpg") no-repeat;
-  }
-  
-  .container {
-    position: relative;
-  }
-  
-  #site-title {
-    padding-left: 260px;
-  }
-  
-  .mg-lf-10 {
-    margin-left: 10px;
-  }
-
-  .pad-left-20 {
-    padding-left: 20px;
-  }
-  
-  .right {
-    float: right;
-  }
-  
-  a {
-    text-decoration: none;
-    &:hover {
-      text-decoration: none;
-    }
-  }
-  
-  .login-btn {
-    margin-top: 40px;
-    margin-left: 120px;
-    color: black;
-    font-family: Verdana;
-    font-weight: bold;
-    border: 1px solid black;
-    border-radius: 10%;
-    letter-spacing: -0.02em;
-    &:hover {
-      color: rgb(0, 208, 208);
-      border: 1px solid black;
-    }
-  }
-  
-  .social-networking {
-    margin-top: 40px;
-    margin-left: 140px;
-  }
-  
-  .fa {
-    padding: 15px;
-    font-size: 30px;
-    width: 60px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 100%;
-  }
-  
-  .fa-facebook {
-    margin-right: 20px;
-    background: #3B5998;
-    color: white;
-    &:hover {
-      color: beige;
-    }
-  }
-  
-  .fa-twitter {
-    background: #55ACEE;
-    color: white;
-  }
-  
-  #navbar-icon {
-    padding-bottom: 10px;
-  }
-
-  .nav-item .nav-link {
-    color: black !important;
-    background-color: rgba(0, 224, 224, 0.8) !important;
-    border: 1px solid black !important;
-    margin-left: 1px !important;
-    margin-right: 1px !important;
-  }
-  
-  .nav-item .nav-link:hover {
-    color: rgba(0, 128, 128, 1) !important;
-  }
-  
-  .nav-item .active {
-    color: beige !important;
-  }
-
-  .col-sm-7 {
-    height: 150px;
-  }
-  
-  .margin-left-40 {
-    margin-left: 40px;
-  }
-  
-  .right {
-    float: right;
-  }
-  
-  #main-content {
-    height: 400px;
-    background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(0, 128, 128, 1) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 128, 128, 1)), color-stop(100%, rgba(255, 255, 255, 1)));
-    background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(0, 128, 128, 1) 100%);
-    background: -o-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(0, 128, 128, 1) 100%);
-    background: -ms-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(0, 128, 128, 1) 100%);
-    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 128, 128, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008080', endColorstr='#ffffff',GradientType=0 );
-    background-position: top;
-    background-repeat: repeat-x;
-  }
-  
-  #submenu {
-    background-color: rgba(0, 224, 224, 0.2);
-    border: 1px solid rgba(0, 224, 224, 0.4);
-    a {
-      padding-left: 30px;
-      &:first-child {
-        padding-left: 0px;
-      }
-    }
-  }
   
   /* Login Page Content Styling ************************************************************** */
   
@@ -249,45 +113,45 @@
   
   /* Home Page Content Styline ************************************************************** */
 
-  #homeMain {
-    background: powderblue;
-  }
+  // #homeMain {
+  //   background: powderblue;
+  // }
 
-  #homeExercisesSelect {
-    height: 300px;
-  }
+  // #homeExercisesSelect {
+  //   height: 300px;
+  // }
 
-  #homeArrowContainer {
-    line-height: 348px;
-    text-align: center;
-  }
+  // #homeArrowContainer {
+  //   line-height: 348px;
+  //   text-align: center;
+  // }
 
-  #homeAddExercise {
-    border-radius: 30%;
-    display: inline-block;
-    > {
-      i {
-        color: black;
-        width: 100%;
-        text-align: center;
-      }
-      input {
-        background: none;
-        color: white;
-        padding: 0;
-        border: 0;
-      }
-    }
-  }
+  // #homeAddExercise {
+  //   border-radius: 30%;
+  //   display: inline-block;
+  //   > {
+  //     i {
+  //       color: black;
+  //       width: 100%;
+  //       text-align: center;
+  //     }
+  //     input {
+  //       background: none;
+  //       color: white;
+  //       padding: 0;
+  //       border: 0;
+  //     }
+  //   }
+  // }
 
-  #homeExercisesAdded {
-    height: 200px;
-  }
+  // #homeExercisesAdded {
+  //   height: 200px;
+  // }
 
-  #homeDeleteSelected {
-    float: right;
-    margin-top: 10px;
-  }
+  // #homeDeleteSelected {
+  //   float: right;
+  //   margin-top: 10px;
+  // }
 
   /*  Tracker Page Content Styling ************************************************************** */
   
@@ -377,69 +241,4 @@
     float: right;
     margin-top: 10px;
     margin-left: 10px;
-  }
-  
-  /* Routes Page Content Styling ************************************************************** */
-  
-  #addNewRouteBtn {
-    margin-left: 15px;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  
-  .plusIcon {
-    text-shadow: 1px 1px 1px #ccc;
-    font-size: 1em;
-    margin-right: 3px;
-    margin-bottom: 3px;
-    padding: 3px;
-    width: 20px;
-  }
-  
-  #newRouteForm {
-    margin: 0px;
-    margin-top: 10px;
-  }
-  
-  #newRouteCard {
-    display: none;
-    position: relative;
-    width: 100%;
-  }
-  
-  #newRouteCardBody {
-    position: relative;
-    width: 100%;
-  }
-  
-  #routesNewRouteName {
-    margin-left: 3px;
-    display: inline;
-    width: 200px;
-  }
-  
-  #routeTypes, #topRopeCheck, #routesNewRouteGrade, #routesNewRoutePitchesDiv, #firstAscentCheck, #routeSafety, #routesNewRouteAttemptsDiv {
-    margin-left: 20px;
-  }
-  
-  #routesNewRoutePitches, #routesNewRouteAttempts {
-    width: 100px;
-    display: inline-block;
-  }
-  
-  #topRopeCheck, #routesNewRouteGradeVS, #routesNewRouteGradeYDS, #routesNewRoutePitchesDiv, #routeSafety {
-    display: none;
-  }
-  
-  #routeDetailsDiv {
-    margin-top: 20px;
-  }
-  
-  #routesNewRouteSubmitDiv {
-    position: absolute;
-    right: 40px;
-  }
-  
-  #myRoutesTableDiv {
-    margin-top: 20px;
   }
