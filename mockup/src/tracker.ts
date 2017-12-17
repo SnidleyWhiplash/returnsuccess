@@ -15,10 +15,12 @@ export class User {
     }
 
     init() {
-        $.getJSON("tracker/exercises").done (data =>{
-            this.exercises = data;
-            this.drawExercises();
-        })
+        return $.when(
+            $.getJSON("/tracker/exercises").done( data => {
+                this.exercises = data;
+                this.drawExercises();
+            })
+        );
     }
 }
 
@@ -50,21 +52,21 @@ export class Entry {
     }
 }
 
-export class Tracker {
-    user: User[] = [];
-    exercises: Exercise[] = [];
+// export class Tracker {
+//     user: User[] = [];
+//     exercises: Exercise[] = [];
 
-    init() {
-        return $.when(
-            $.getJSON("/tracker/exercises").done( data => {
-                this.exercises = data;
-            })
-        );
-    }
+//     init() {
+//         return $.when(
+//             $.getJSON("/tracker/exercises").done( data => {
+//                 this.exercises = data;
+//             })
+//         );
+//     }
 
-}
+// }
 
-const tracker = new Tracker();
+//const tracker = new Tracker();
 const entry = new Entry();
 const me = new User();
 
@@ -72,18 +74,17 @@ me.init();
 entry.init();
 entry.showUser();
 
+// tracker.init().done(()=>{
+//     entry.logExercise();
+//     entry.showUser();
+
+//     me.exercises = tracker.exercises;
+//     me.drawExercises();
+// });
+
 $("#exercise-list").click("li", function(e) {
     e.preventDefault();
     const $li = $(e.originalEvent.srcElement);
     const data = { name: $li.text() };
     $.post("/tracker/entry/exercises", data);
 })
-tracker.init().done(()=>{
-    //entry.logExercise();
-    entry.showUser();
-
-    me.exercises = tracker.exercises;
-    me.drawExercises();
-});
-
-

@@ -7,4 +7,4 @@ module.exports = [
     {name: "Pull-ups"},
     {name: "Sit-ups"},
     {name: "Squats"}
-]
+];

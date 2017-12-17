@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const server = express();
 
 server.use(bodyParser.urlencoded());
-server.use("/home", express.static("./mockup"));
+server.use("/client", express.static("./mockup"));
 server.use("/tracker", trackerController.router);
 
 server.listen(8081);
