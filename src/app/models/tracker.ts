@@ -8,6 +8,7 @@ export class User {
 }
 
 export class Entry {
-    user: User[] = [new User()];
+    user: User;
+    users: User[] = [new User()];
     exercises: Exercise[] = [];
 }

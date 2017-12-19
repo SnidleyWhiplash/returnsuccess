@@ -34,4 +34,5 @@ export class TrackerComponent implements OnInit {
     $.post(this.apiRoot + "/tracker/entry/exercises", data);
   }
 
+
 }

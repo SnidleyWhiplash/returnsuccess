@@ -1,3 +1,71 @@
-<p>
-  login works!
-</p>
+<div class="container-fluid" id="main-content">
+  <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+          <div class="card" id="loginCardDiv">
+              <div class="card-body" id="climbing-wall-background">
+                  <div class="row" id="loginLoginRegisterPanel">
+                      <div class="col-md-1"></div>
+                      <div class="col-md-10">
+                          <div class="card">
+                              <div class="card-body">
+                                  <div class="row">
+                                      <div class="col-md-5">
+                                          <form>
+                                              <div class="form-group">
+                                                  <label for="loginInputUsername">Username:</label>
+                                                  <input type="text" class="form-control" id="loginInputUsername" placeholder="Username" required [(ngModel)]="name">
+                                              </div>
+                                              <div class="form-group">
+                                                  <label for="loginInputPassword">Password:</label>
+                                                  <input type="password" class="form-control" id="loginInputPassword" placeholder="Password" required [(ngModel)]="password">
+                                              </div>
+                                              <button type="submit" class="btn btn-success" id="loginSubmitBtn" (click)="login()">Login</button>
+                                          </form>
+                                      </div>
+                                      <div class="col-md-2">
+                                          <div class="vertical-rule"></div>
+                                      </div>
+                                      <!-- <div class="" id="loginRegisterWrapperDiv"> -->
+                                      <div class="col-md-5" id="loginRegisterViaSocialDiv">
+                                          <div id="loginRegisterFbDiv">
+                                              <a class="btn btn-facebook" (click)="loginFB()">
+                                                  <img src="../../assets/imgs/white-fb-logo.svg" id="loginRegisterFbIcon">
+                                                  Login with Facebook
+                                              </a>
+                                          </div>
+                                      </div> 
+                                  </div>
+                                  <!-- </div> -->
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-1"></div>
+                  </div>                  
+                
+                  <!-- recover account details panel -->
+                  <div class="row" id="loginRecoverDetailsPanel">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div id="loginCloseRecover">
+                                    <button type="button" class="btn btn-danger" id="loginCloseRecoverBtn">X</button>
+                                </div>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="loginRecoverDetails">Enter your email address to retrieve your username or password:</label>
+                                        <input type="text" class="form-control" id="loginRecoverDetails" placeholder="email@server.com">
+                                        <button type="submit" class="btn btn-info" id="loginRecoverDetailsBtn">Send Email</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+      <div class="col-md-2"></div>
+  </div>
+</div>

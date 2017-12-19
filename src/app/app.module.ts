@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { HttpModule } from "@angular/http";
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './/app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { TrackerComponent } from './tracker/tracker.component';
 import { IndexComponent } from './index/index.component';
 import { LoginComponent } from './login/login.component';
 import { MyaccountComponent } from './myaccount/myaccount.component';
+import { TrackerService } from './models/tracker.service';
 
 @NgModule({
   declarations: [
@@ -26,11 +28,12 @@ import { MyaccountComponent } from './myaccount/myaccount.component';
   imports: [
     BrowserModule,
     HttpModule,
+    FormsModule,
     AngularFontAwesomeModule,
     AppRoutingModule,
     BsDropdownModule.forRoot()
   ],
-  providers: [],
+  providers: [ TrackerService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
