@@ -1,0 +1,97 @@
+#loginCardDiv {
+    margin-top: 5px;
+    height: 300px;
+  }
+  #climbing-wall-background {
+    background: url("../../assets/imgs/wall-closeup.jpg");
+  }
+  /* .card-body .col-md-6 form {
+      position: relative;
+  } */
+
+  /* login panel */
+  #loginLoginRegisterPanel {
+      margin-bottom: -10px;
+  }
+  #loginUsernameRetrieve:hover, #loginPasswordRetrieve:hover {
+    color: darkblue;
+  }
+  #loginSubmitBtn {
+    float: right;
+  }
+
+  .vertical-rule {
+    width: 105px;
+    height: 264px;
+	  background: linear-gradient(to right, 
+	                              transparent 0%, 
+	                              transparent calc(50% - 0.81px), 
+	                              black calc(50% - 0.8px), 
+	                              black calc(50% + 0.8px), 
+	                              transparent calc(50% + 0.81px), 
+	                              transparent 100%); 
+	}
+
+  /* login fb */
+  #loginRegisterViaSocialDiv {
+    background-color: rgba(255, 255, 255, 0.7);
+    overflow: auto;
+    position: relative;
+  }
+  #loginRegisterFbDiv {
+    text-align: center;
+    /* margin: 10px; */
+    position: absolute;
+    top: 50%;
+    height: 100px;
+    margin-top: -50px;
+  }
+  .btn-facebook, .btn-facebook:hover {
+    text-decoration: none;
+    color: white !important;
+  }
+  .btn-facebook {
+    background-color: #336799;
+    border-color: #336799;
+  }
+  .btn-facebook:hover {
+    background-color: #264d73;
+    border-color: #24486b;
+  }
+  #loginRegisterFbIcon {
+    border-style: none;
+    vertical-align: middle;
+    height: 24px;
+    margin: -5px 8px 0 0;
+    padding: 0;
+  }
+
+  /*  recovery panel */
+  #loginRecoverDetailsPanel {
+    display: none;
+  }
+  #loginUsernameRetrieve, #loginPasswordRetrieve {
+    position: relative;
+    top: 5px;
+    border: none;
+    color: deepskyblue;
+    background-color: white;
+  }
+  #loginRecoverDetails {
+    width: 250px;
+  }
+  #loginRecoverDetailsBtn {
+    margin-top: 15px;
+  }
+  #loginCloseRecover {
+    float: right;
+  }
+  /*#loginRegisterWrapperDiv {
+    width: 350px;
+    height: 444px; 
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    overflow: auto;
+  } */
