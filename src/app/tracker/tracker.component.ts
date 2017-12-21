@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
 import { Exercise, User, Entry } from '../models/tracker';
-
-import * as $ from 'jquery';
 
 @Component({
   selector: 'app-tracker',
@@ -13,25 +12,44 @@ export class TrackerComponent implements OnInit {
   apiRoot = "//localhost:8081";
   entry = new Entry();
   me = new User();
-  constructor() { }
+  constructor(private http: Http) { }
 
   ngOnInit() {
       setInterval(()=> this.update(), 1000);
-      $.getJSON(this.apiRoot + "/tracker/exercises").done( data => {
-        this.me.exercises = data;
+      this.http.get(this.apiRoot + "/tracker/exercises").subscribe( data => {
+        this.me.exercises = data.json();
       })
   }
 
   update() {
-    $.getJSON(this.apiRoot + "/tracker/entry/exercises").done( data=>{
-        this.entry.exercises = data;
+    this.http.get(this.apiRoot + "/tracker/entry/exercises").subscribe( data => {
+        this.entry.exercises = data.json();
+    });
+    this.http.get(this.apiRoot + "/tracker/entry/users").subscribe( data => {
+      // const user = data.json();
+      // this.entry.user = user;
+      // this.entry.users.push(user);
+      this.entry.users = data.json();
     });
   }
 
   addToEntry(e: MouseEvent, exercise: Exercise, i: number) {
     e.preventDefault();
     const data = { name: exercise.name };
-    $.post(this.apiRoot + "/tracker/entry/exercises", data);
+    this.http.post(this.apiRoot + "/tracker/entry/exercises", data).subscribe(res=>{
+      this.entry.exercises.push(res.json());
+    })
+  }
+
+  removeExercise(ex: Exercise) {
+    console.log("remove clicked");
+    var index = this.entry.exercises.indexOf(ex, 0);
+    console.log("index: " + index);
+    if (index > -1) {
+      var ex_name = this.entry.exercises[index].name;
+      this.entry.exercises.splice(index, 1);
+      this.http.delete(this.apiRoot + "/tracker/entry/exercises", ex_name).subscribe();
+    }
   }
 
 

@@ -9,10 +9,12 @@ export class TrackerService {
   apiRoot = "//localhost:8081";
   me: User;
 
-  constructor(private http: Http, private router: Router) { }
+  constructor(private http: Http, private router: Router) { 
+
+  }
 
   login(name: string, password: string) {
-    this.http.post(this.apiRoot + "/tracker/entry/user", {name, password}).subscribe(
+    this.http.post(this.apiRoot + "/tracker/entry/users", {name, password }).subscribe( 
       data => {
         this.me = data.json();
         this.http.get(this.apiRoot + "/tracker/exercises").subscribe( data => {
