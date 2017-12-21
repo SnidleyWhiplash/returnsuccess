@@ -9,10 +9,11 @@ declare var FB: any;
 @Injectable()
 export class TrackerService {
 
-  apiRoot = "//localhost:8081";
+  apiRoot: string;
   me: User;
 
-  constructor(private http: Http, private router: Router) { 
+  constructor(private http: Http, private router: Router) {
+    this.apiRoot = `//${window.location.hostname}:8081`
     window.fbAsyncInit = function() {
       FB.init({
         appId      : '501672660207776',

@@ -8,6 +8,7 @@
     "sass": "node-sass mockup/src --output mockup/dist --watch",
     "webpack:main": "webpack mockup/src/main.js mockup/dist/bundle.js --optimize-minimize --watch",
     "server": "nodemon --watch server server/index.js",
+    "ng:c9": "ng serve --public return-success-szierler.c9users.io:8080 --host $IP --port $PORT",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
