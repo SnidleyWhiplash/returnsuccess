@@ -20,8 +20,13 @@ router
     })
     .post("/entry/users", (req, res) => {
         if (req.body.password == "password") {
-            const user = { name: req.body.name};
-            tracker.entry.users.push(user);
+            // const user = { name: req.body.name};
+            // tracker.entry.users.push(user);
+            let user = tracker.entry.users.find(x=> x.fbid == req.body.fbid);
+            if(!user) {
+                user = { name: req.body.name, id: tracker.entry.users.length, fbid: req.body.fbid, picture: req.body.picture };
+                tracker.entry.users.push(user);
+            }
             res.status(201).send(user);
         } else {
             res.status(403).send("Invalid Password");

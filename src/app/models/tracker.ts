@@ -4,6 +4,7 @@ export class Exercise {
 
 export class User {
     name: string = "Firstname Lastname";
+    id: number;
     exercises: Exercise[] = [];
 }
 

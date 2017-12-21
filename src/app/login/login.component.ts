@@ -21,4 +21,7 @@ export class LoginComponent implements OnInit {
   login() {
     this.tracker.login(this.name, this.password);
   }
+  loginFB() {
+    this.tracker.loginFB();
+  }
 }
